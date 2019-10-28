@@ -8,13 +8,20 @@ public class PetOwner {
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
+
+    private String name;
+    private Integer age;
+    private Pet pet;
+
     public PetOwner(String name, Pet... pets) {
+
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+        this.pet = pet;
     }
 
     /**
@@ -22,6 +29,7 @@ public class PetOwner {
      */
     public void removePet(Pet pet) {
 
+        this.pet = pet;
     }
 
     /**
@@ -29,13 +37,15 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+
+        return true;
     }
 
     /**
      * @return the age of the Pet object whose age field is the lowest amongst all Pets in this class
      */
     public Integer getYoungetPetAge() {
+
         return null;
     }
 
