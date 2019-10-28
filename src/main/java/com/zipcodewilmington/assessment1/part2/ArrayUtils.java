@@ -29,7 +29,15 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+        Object[] newArr = new Object[objectArray.length];
+        int i = 0;
+        for(Object o : objectArray){
+            if(!(o.equals(objectToRemove))){
+                newArr[i] = o;
+                i++;
+            }
+        }
+        return newArr;
     }
 
     /**

@@ -39,8 +39,8 @@ public class StringUtils {
         String revStr = getFirstWord(sentence);
         String outcome = "";
 
-        for(int i = revStr.length()-1; i >=0; i--){
-           outcome +=  revStr.charAt(i);
+        for (int i = revStr.length() - 1; i >= 0; i--) {
+            outcome += revStr.charAt(i);
         }
         return outcome;
     }
@@ -54,22 +54,21 @@ public class StringUtils {
 
         String revCamelStr = reverseFirstWord(sentence);
 
-        String outcome = revCamelStr.substring(0,1).toUpperCase() + revCamelStr.substring(1);
+        String outcome = revCamelStr.substring(0, 1).toUpperCase() + revCamelStr.substring(1);
 
         return outcome;
     }
 
 
     /**
-     * @param str string input from client
+     * @param str   string input from client
      * @param index the index of the character to be removed from `str`
      * @return string with identical contents, excluding the character at the specified index
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
 
-
-        return null;
+        return str.substring(0, index) + str.substring(index+1);
     }
 
 }
