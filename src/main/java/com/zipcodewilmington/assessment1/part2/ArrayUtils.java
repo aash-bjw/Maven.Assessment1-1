@@ -84,6 +84,7 @@ public class ArrayUtils {
      */
     public static Integer getLeastCommon(Integer[] objectArray) {
 
+        //solution doesnt work
 
         Arrays.sort(objectArray);
 
@@ -92,12 +93,12 @@ public class ArrayUtils {
         int common = objectArray[0];
 
         for (int i = 1; i < objectArray.length; i++) {
-            if (!(objectArray[i] == objectArray[i-1])) {
+            if (!(objectArray[i] == objectArray[i - 1])) {
                 currentCounter++;
             } else {
                 if (currentCounter > minCounter) {
                     minCounter = currentCounter;
-                    common = objectArray[i-1];
+                    common = objectArray[i - 1];
                 }
                 currentCounter = 0;
             }
@@ -108,7 +109,7 @@ public class ArrayUtils {
             common = objectArray[objectArray.length - 1];
         }
         return common;
-
+    }
 
     /**
      * @param objectArray      an array of any type of Object
